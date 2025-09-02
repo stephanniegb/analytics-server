@@ -48,8 +48,8 @@ app.get("/analytics/maxmind", (req, res) => {
 });
 
 app.get("/analytics/api", (req, res) => {
-  //   const ip = req.ip || req.socket.remoteAddress;
-  const ip = "98.97.79.166";
+  const ip = req.ip || req.socket.remoteAddress;
+  // const ip = "98.97.79.166";
   const url = `http://ip-api.com/json/${ip}`;
   //   const url = `https://geo.ipify.org/api/v2/country?apiKey=at_Fcr73oayP6SY3tcPAXQLVumG2XpTx&ipAddress=${ip}`;
   fetch(url)
